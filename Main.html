@@ -39,15 +39,44 @@
 <!--    body Begin-->
     <body>
 <!--        Div for posting-->
+        
 <div id="postPane" class="postPane">
-  <input placeholder="Title" type="text" id="title">
-    <br/>
-    <input placeholder="Message" type="text" id="message">
+    <div class="sidebyside">
+        <div class="row">
+        <div class="col-sm-1"></div>
+            <button class="btn btn-warning" style="margin: 3rem 0px 0px 0px;" onclick="closePane()">&lt; Close</button>
+        
+        <div class="col-sm">
+    <h1 class="card text-center" style="margin-top: 3rem;margin-left : 5px;">
+        Post a Card!
+    </h1>
+        </div>
+        </div>
+    </div>    
     <br />
-    <input placeholder="Location" type="text" id="LocTag">
-    <br/>
-    <input placeholder="Tags" type="text" id="tagTag">
-    <button id="Post" onclick="newPost()">Post</button>
+ <div class="container">
+     <div class="form-group">
+     <label for="title">Title</label>
+    <input class="form-control" type="text" id="title">
+         </div>
+    <div class="form-group">
+    <label for="Message">Message</label>
+    <textarea class="form-control" id="message" rows="3"></textarea>
+    </div>    
+    <br />
+    <div class="someotherthing">
+      <div class="row">
+        <div class="col-sm">
+        <input class="form-control" placeholder="Location" type="text" id="LocTag">
+        </div>
+        <div class="col-sm">
+         <input class="form-control" placeholder="Tags" type="text" id="tagTag">
+        </div>
+     </div>
+     </div>
+    <br />
+    <button id="Post" onclick="newPost()" class="btn btn-success" style="margin-top:2rem;">Post</button>
+     </div>
 </div>
 <!--div for the first panel-->
 <div id="panelOne" class="panelOne bg-primary">
@@ -120,8 +149,11 @@ function closeThree() {
 }    
     
 function postPane(){
-    document.getElementById("postPane").style.height = "30rem";
+    document.getElementById("postPane").style.height = "35rem";
 }
+function closePane(){
+    document.getElementById("postPane").style.height = "0px";
+}    
     </script>
     
         <script src="main.js"></script>
