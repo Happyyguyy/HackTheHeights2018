@@ -24,7 +24,7 @@ function newPost() {
     
     newTags.forEach(function(element) {
         var div = document.createElement("div");
-        div.innerHTML += '<div class="card" id="tags"><span style="margin-left: 15px; font-size:30px;cursor:pointer" onclick="openTwo()" >' +
+        div.innerHTML += '<div class="card" id="tags"><span style="margin-left: 15px; font-size:30px;cursor:pointer" onclick="openTwo()" id='+ element + '>' +
             '<h2 id="TagCard">&#9776; ' +
             element +
             '</h2></span></div>';

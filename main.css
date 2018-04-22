@@ -129,6 +129,10 @@ body {
 
 
 }
+.time {
+    margin-left: 60px;
+    font-size: 10px;
+}
 ::-webkit-scrollbar {
     width: .5em;
 }
