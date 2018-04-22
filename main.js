@@ -1,4 +1,3 @@
-
 function newPost() {    
     var newTags = []
     var title = $("#title").val();
@@ -37,6 +36,10 @@ function newPost() {
     });
 }
 
-
- div.innerHTML += '<div class="card"><span style="font-size:30px;cursor:pointer" onclick="openThree()"> <h1 class="title" id="PostCardTitle">'+ elementTitle +'</h1><p class="comment" id="PostCardMessage">'+ elementMessage +'</p><p class="time">Time: Sometime EST</p></span> </div>';
-$("#panelTwo").append(div);
+function populateTags(matchingNodes) {
+    matchingNodes.forEach(function(element) {
+     div.innerHTML += '<div class="card"><span style="font-size:30px;cursor:pointer" onclick="openThree()"> <h1 class="title" id="PostCardTitle">'+ elementTitle +'</h1><p class="comment" id="PostCardMessage">'+ elementMessage +'</p><p class="time">Time: Sometime EST</p></span> </div>';
+    $("#panelTwo").append(div);
+    });
+    
+);
