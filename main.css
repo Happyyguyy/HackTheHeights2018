@@ -99,7 +99,7 @@ body {
     margin-left: 40px;    
 }
 .postPane {
-    left: 30%;
+    left: 60%;
     width: 40%;
     background-color: darkgray;
     z-index: 3;
@@ -111,11 +111,12 @@ body {
     border-bottom-right-radius: 50px;
     border-bottom-left-radius: 50px;
     overflow-y: hidden;
+    overflow-x: hidden;
 }
 .container{
     text-align: center;
     margin: 0 auto;
-    margin-top: 5rem;
+    margin-top: 2rem;
 }
 
 }
