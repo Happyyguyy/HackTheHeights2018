@@ -4,13 +4,14 @@ function newPost() {
     var title = $("#title").val();
     var message = $("#message").val();
     var location = $("#LocTag").val();
-    var tags = $("#tags").val().split(" ");
+    var tagsText = $("#tagTag").val();
+    var tagsArr = tagsText.split
     
     database.push({
         'title': title,
         'message': message,
         'locTag': location,
-        'tags': tags
+        'tagTag': tags
     });
     
     $("#Post").click(function() {
