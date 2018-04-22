@@ -114,6 +114,15 @@ body {
     overflow-y: hidden;
     overflow-x: hidden;
 }
+.blackout{
+    height: 100%;
+    width: 100%;
+    
+    z-index: 1;
+    display: block;
+    background-color: black;
+    
+}
 .container{
     text-align: center;
     margin: 0 auto;
