@@ -84,7 +84,7 @@
 <div id="panelOne" class="panelOne bg-primary">
     <h1 class="heading text-light">Tags</h1>
   <p class="text-light" style="margin-left: 30px;">Click a Tag below to view cards with that tag.</p>
-    <div class="card" >
+    <div class="card" id="tags">
         <span style="margin-left: 15px; font-size:30px;cursor:pointer" onclick="openTwo()" >
             <h2 id="TagCard">&#9776; Tag</h2></span>
     </div>
@@ -132,7 +132,9 @@
 </script>
         
 <script>
-var masterTags = []
+    
+var masterTags = [];
+    
 function openTwo() {
     document.getElementById("panelTwo").style.width = "25%";
  }    
