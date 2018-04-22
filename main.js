@@ -20,7 +20,9 @@ function newPost() {
         'tagTag': tagsArr
     });
     
+  
     $("#Post").click(function() {
         newPost();
+     
     });
 }

@@ -75,7 +75,7 @@
      </div>
      </div>
     <br />
-    <button id="Post" onclick="newPost()" class="btn btn-success" style="margin-top:2rem;">Post</button>
+    <button id="Post" onclick="newPost();closePane();ClearFields()" class="btn btn-success" style="margin-top:2rem;">Post</button>
      </div>
 </div>
 <!--div for the first panel-->
@@ -155,6 +155,13 @@ function postPane(){
 }
 function closePane(){
     document.getElementById("postPane").style.height = "0px";
+}    
+function ClearFields() {
+
+     document.getElementById("title").value = "";
+     document.getElementById("message").value = "";
+    document.getElementById("LocTag").value = "";
+    document.getElementById("tagTag").value = "";
 }    
     </script>
     
