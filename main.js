@@ -22,7 +22,6 @@ function newPost() {
         'tagTag': tagsArr
     });
     
-<<<<<<< HEAD
     newTags.forEach(function(element) {
         var div = document.createElement("div");
         div.innerHTML += '<span style="margin-left: 15px; font-size:30px;cursor:pointer" onclick="openTwo()" >' +
@@ -33,9 +32,6 @@ function newPost() {
         
     });
     
-=======
-  
->>>>>>> c837e352f59042594b6f97d4640fd34a6b190b86
     $("#Post").click(function() {
         newPost();
      
