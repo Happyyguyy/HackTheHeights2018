@@ -83,7 +83,8 @@
     <h1 class="heading text-light">Tags</h1>
   <p class="text-light" style="margin-left: 30px;">Click a Tag below to view cards with that tag.</p>
     <div class="card" >
-        <span style="margin-left: 15px; font-size:30px;cursor:pointer" onclick="openTwo()">&#9776; Tag 1</span>
+        <span style="margin-left: 15px; font-size:30px;cursor:pointer" onclick="openTwo()" >
+            <h2 id="TagCard">&#9776; Tag</h2></span>
     </div>
 </div>
 
@@ -94,8 +95,8 @@
   <p class="text-dark" style="margin-left: 30px;">Click on a card below to see replies.</p>
     <div class="card">  
     <span style="font-size:30px;cursor:pointer" onclick="openThree()"> 
-        <h1 class="title">Title</h1>
-            <p class="comment">Text of Some comment</p>
+        <h1 class="title" id="PostCardTitle">Title</h1>
+            <p class="comment" id="PostCardMessage">Text of Some comment</p>
         
         </span>
     </div> 
@@ -103,9 +104,10 @@
 </div>
 <!--div for third panel-->
 <div id="panelThree" class="panelThree bg-light">
+    <a href="javascript:void(0)" class="closebtn " onclick="closeThree()">&times; Close</a>
     <div class="card">
         <h1 class="heading">Comments</h1>
-        <a href="javascript:void(0)" class="closebtn" onclick="closeThree()">&times;</a>
+        
     </div>
 
     </div>
