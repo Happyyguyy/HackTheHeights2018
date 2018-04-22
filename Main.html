@@ -51,8 +51,14 @@
     <body>
 <!--        Div for posting-->
 <div id="postPane" class="postPane">
-  <h2>Hello world</h2>
-
+  <input placeholder="Title" type="text" id="title">
+    <br/>
+    <input placeholder="Message" type="text" id="message">
+    <br />
+    <input placeholder="Location" type="text" id="LocTag">
+    <br/>
+    <input placeholder="Tags" type="text" id="tagTag">
+    <button id="Post" onclick="newPost()">Post</button>
 </div>
 <!--div for the first panel-->
 <div id="panelOne" class="panelOne bg-primary">
@@ -92,7 +98,7 @@
     
 function openTwo() {
     document.getElementById("panelTwo").style.width = "25%";
-}    
+ }    
     
 function closeTwo() {
     document.getElementById("panelTwo").style.width = "0%";
@@ -112,8 +118,10 @@ function closeThree() {
 function postPane(){
     document.getElementById("postPane").style.height = "30rem";
 }
+    </script>
     
-</script>
+
+    
 
 
 </body>
