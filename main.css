@@ -6,13 +6,14 @@ body {
     height: 100%;
     width: 25%;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     top: 0;
     left: 0;
-    background-color: red;
+
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
+    margin-top: 3.5rem;
 }
 
 .panelOne .closebtn {
@@ -27,13 +28,14 @@ body {
     width: 0%;
     margin-left: 25%;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     top: 0;
     left: 0;
     background-color: pink;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
+    margin-top: 3.5rem;
 }
 
 .panelTwo a {
@@ -58,16 +60,17 @@ body {
     width: 0%;
     margin-left: 50%;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     top: 0;
     left: 0;
     background-color: lightblue;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
+    margin-top: 3.5rem;
 }
 .panelThree .closebtn {
-    position: absolute;
+    position: ;
     top: 0;
     right: 25px;
     font-size: 36px;
@@ -93,8 +96,21 @@ body {
 }
 .comment {
     font-size: 20px;
-    margin-left: 40px;
-    
+    margin-left: 40px;    
+}
+.postPane {
+    left: 20%;
+    width: 60%;
+    background-color: darkgray;
+    z-index: 3;
+    position:fixed;
+    top:3.5rem;
+    left:20%;
+    height: 0;    
+    transition: 0.5s;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    overflow-y: hidden;
 }
 ::-webkit-scrollbar {
     width: .5em;

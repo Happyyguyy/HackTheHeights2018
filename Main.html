@@ -9,128 +9,112 @@
 <style>
 
 </style>
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDpYiNYdoHpAI6fU1e3bYsKjGi4RhCq_Cg",
+    authDomain: "cards-1b7fe.firebaseapp.com",
+    databaseURL: "https://cards-1b7fe.firebaseio.com",
+    projectId: "cards-1b7fe",
+    storageBucket: "cards-1b7fe.appspot.com",
+    messagingSenderId: "361481415273"
+  };
+  firebase.initializeApp(config);
+</script>
 </head>
-<body>
+<!--    navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Cards</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-<div id="panelOne" class="panelOne">
-    <h1 class="heading">Tags</h2>
-  <p>Click on the element below to open the side navigation menu, and push this content to the right.</p>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <span class="nav-link" onclick="postPane()">POST</span>  
+       
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+<!--    body Begin-->
+    <body>
+<!--        Div for posting-->
+<div id="postPane" class="postPane">
+  <h2>Hello world</h2>
+
+</div>
+<!--div for the first panel-->
+<div id="panelOne" class="panelOne bg-primary">
+    <h1 class="heading text-light">Tags</h1>
+  <p class="text-light" style="margin-left: 30px;">Click a Tag below to view cards with that tag.</p>
     <div class="card" >
-        <span style="font-size:30px;cursor:pointer" onclick="openTwo()">&#9776; Tag 1</span>
-    </div>
-    <div class="card" >
-        <span style="font-size:30px;cursor:pointer" onclick="openTwo()">&#9776; Tag 2</span>
-    </div>
-        <div class="card" >
-        <span style="font-size:30px;cursor:pointer" onclick="openTwo()">&#9776; Tag 3</span>
-    </div>
-        <div class="card" >
-        <span style="font-size:30px;cursor:pointer" onclick="openTwo()">&#9776; Tag 4</span>
-    </div>
+        <span style="margin-left: 15px; font-size:30px;cursor:pointer" onclick="openTwo()">&#9776; Tag 1</span>
     </div>
 </div>
-    
+
+<!--    div for second panel-->
 <div id="panelTwo" class="panelTwo">
   <a href="javascript:void(0)" class="closebtn" onclick="closeTwo()">&laquo;</a>
-    <h1 class="heading">Cards</h2>
-  <p>Click on the element below to open the side navigation menu, and push this content to the right.</p>
+    <h1 class="heading text-dark">Cards</h1>
+  <p class="text-dark" style="margin-left: 30px;">Click on a card below to see replies.</p>
     <div class="card">  
     <span style="font-size:30px;cursor:pointer" onclick="openThree()"> 
-        <h1 ="title">Title</h1>
-            <p class="comment">Text of Some comment</p>
-        
-        </span>
-    </div> 
-     <div class="card">  
-    <span style="font-size:30px;cursor:pointer" onclick="openThree()"> 
-        <h1 ="title">Title</h1>
-            <p class="comment">Text of Some comment</p>
-        
-        </span>
-    </div> 
-     <div class="card">  
-    <span style="font-size:30px;cursor:pointer" onclick="openThree()"> 
-        <h1 ="title">Title</h1>
-            <p class="comment">Text of Some comment</p>
-        
-        </span>
-    </div> 
-     <div class="card">  
-    <span style="font-size:30px;cursor:pointer" onclick="openThree()"> 
-        <h1 ="title">Title</h1>
-            <p class="comment">Text of Some comment</p>
-        
-        </span>
-    </div> 
-     <div class="card">  
-    <span style="font-size:30px;cursor:pointer" onclick="openThree()"> 
         <h1 class="title">Title</h1>
             <p class="comment">Text of Some comment</p>
         
         </span>
     </div> 
-     <div class="card">  
-    <span style="font-size:30px;cursor:pointer" onclick="openThree()"> 
-        <h1 class="title">Title</h1>
-            <p class="comment">Text of Some comment</p>
-        
-        </span>
-    </div> 
-     <div class="card">  
-    <span style="font-size:30px;cursor:pointer" onclick="openThree()"> 
-        <h1 class="title">Title</h1>
-            <p class="comment">Text of Some comment</p>
-        
-        </span>
-    </div> 
-    
-    
-</div>
 
-<div id="panelThree" class="panelThree">
+</div>
+<!--div for third panel-->
+<div id="panelThree" class="panelThree bg-light">
     <div class="card">
         <h1 class="heading">Comments</h1>
         <a href="javascript:void(0)" class="closebtn" onclick="closeThree()">&times;</a>
     </div>
 
     </div>
-<div id="main">
-  
-
-</div>
 
 
-    
+<!--    scripts-->
 <script>
-function openOne() {
-    document.getElementById("panelOne").style.width = "25%";
- //   document.getElementById("main").style.marginLeft = "20%";
-}
-
-function closeOne() {
-    document.getElementById("panelOne").style.width = "0%";
-//    document.getElementById("main").style.marginLeft= "0%";
-}
+    
 function openTwo() {
     document.getElementById("panelTwo").style.width = "25%";
-    
-  //  document.getElementById("main").style.marginLeft = "20%";
 }    
+    
 function closeTwo() {
     document.getElementById("panelTwo").style.width = "0%";
     document.getElementById("panelThree").style.marginLeft = "25%";
     document.getElementById("panelThree").style.width = "0%";
-//    document.getElementById("main").style.marginLeft= "0%";
 }
+    
 function openThree() {
     document.getElementById("panelThree").style.width = "50%";
-   
+    document.getElementById("panelThree").style.marginLeft = "50%";
 }
+    
 function closeThree() {
     document.getElementById("panelThree").style.width = "0%";
 }    
-
+    
+function postPane(){
+    document.getElementById("postPane").style.height = "30rem";
+}
+    
 </script>
-     
+
+
 </body>
 </html> 
