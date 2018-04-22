@@ -148,14 +148,20 @@
 </script>
         
 <script>
-    
+var database = firebase.database().ref();
 var masterTags = [];
+var matchingNodes = [];
+var currentTag;
     
-function openTwo() {
+function openTwo(clicked_id) {
+    database.child('cards-1b7fe').orderByChild('tag').equalTo(clicked_id).on("value", function(snapshot) {
+        matchingNodes.push(snapshot)
+    });
     document.getElementById("panelTwo").style.width = "25%";
  }    
     
 function closeTwo() {
+    
     document.getElementById("panelTwo").style.width = "0%";
     document.getElementById("panelThree").style.marginLeft = "25%";
     document.getElementById("panelThree").style.width = "0%";
